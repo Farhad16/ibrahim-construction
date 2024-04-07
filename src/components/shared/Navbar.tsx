@@ -7,7 +7,6 @@ import { pages } from "../../constance/menu";
 import NavDrawer from "./NavDrawer";
 
 const Navbar = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -51,7 +50,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex items-center justify-end bg-global w-1/2 h-[70px] clip absolute right-0 -bottom-[35%]">
+      <div className="hidden md:flex items-center justify-end bg-global w-1/2 h-[70px] clip absolute right-0 -bottom-[35%] z-10">
         <div className="flex items-center gap-6 mr-[70px] text-white text-base">
           {pages.map((page) => (
             <NavLink
