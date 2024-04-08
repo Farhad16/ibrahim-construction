@@ -2,7 +2,12 @@
   clip-path: polygon(9% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-nav a {
+.zIdx {
+  z-index: 10;
+}
+
+nav a,
+.scrollNav a {
   position: relative;
 }
 
@@ -15,6 +20,10 @@ nav a::before {
   height: 2px;
   background-color: white;
   transition: all 0.5s;
+}
+
+.scrollNav a::before {
+  background-color: #2f327b;
 }
 
 nav a:hover::before {
@@ -32,8 +41,18 @@ nav a:hover::before {
   transition: all 0.5s;
 }
 
+.scrollNav .active::before {
+  background-color: #2f327b;
+}
+
 .MuiDrawer-paper {
   width: 70% !important;
   background: transparent !important;
   flex-direction: row !important;
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-slide {
+  z-index: 0 !important;
 }

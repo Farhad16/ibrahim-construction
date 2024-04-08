@@ -8,7 +8,7 @@ const Layout = () => {
   return (
     <div className="flex min-h-screen flex-col overflow-hidden">
       <Navbar />
-      <div className="bg-white">
+      <div className="bg-white pt-[80px] sm:pt-0">
         <Outlet />
       </div>
       <Footer />

@@ -7,11 +7,7 @@ import { Link } from "react-router-dom";
 
 const SlideBanner = () => {
   return (
-    <Swiper
-      navigation={true}
-      modules={[Navigation]}
-      className="mySwiper w-full"
-    >
+    <Swiper navigation={true} modules={[Navigation]} className="z-0 w-full">
       <SwiperSlide>
         <div
           style={{

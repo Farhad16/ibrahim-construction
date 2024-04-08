@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { pages } from "../../constance/menu";
 import CloseIcon from "@mui/icons-material/Close";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import FooterLinks from "./FooterLinks";
 
 export default function NavDrawer({ open, toggleDrawer }: any) {
   return (
@@ -30,13 +31,8 @@ export default function NavDrawer({ open, toggleDrawer }: any) {
             </NavLink>
           ))}
         </nav>
-        <div className="flex items-center gap-4 py-6 justify-center w-full">
-          <Link
-            to="https://www.facebook.com/IbrahimConstructionsLimited.ICL/"
-            className="bg-black bg-opacity-80 w-[50px] h-[50px] rounded-full flex items-center justify-center"
-          >
-            <FacebookIcon />
-          </Link>
+        <div className="mb-4">
+          <FooterLinks isMobile={true} />
         </div>
       </div>
 

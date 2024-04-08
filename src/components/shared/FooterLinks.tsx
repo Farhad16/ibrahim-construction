@@ -5,36 +5,47 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { Link } from "react-router-dom";
 
-function FooterLinks() {
-  const icons = [
-    {
-      icon: <FacebookIcon />,
-      link: "#",
-    },
-    {
-      icon: <GoogleIcon />,
-      link: "#",
-    },
-    {
-      icon: <TwitterIcon />,
-      link: "#",
-    },
-    {
-      icon: <LinkedInIcon />,
-      link: "#",
-    },
-  ];
+const icons = [
+  {
+    icon: <FacebookIcon />,
+    link: "#",
+  },
+  {
+    icon: <GoogleIcon />,
+    link: "#",
+  },
+  {
+    icon: <TwitterIcon />,
+    link: "#",
+  },
+  {
+    icon: <LinkedInIcon />,
+    link: "#",
+  },
+];
+const FooterLinks = ({ isMobile }: { isMobile?: boolean }) => {
   return (
-    <div className="flex flex-row items-center gap-4 mt-10 mb-4">
-      {icons.map((obj, idx) => (
-        <Link key={idx} to={obj.link}>
-          <div className="bg-[#dad9d9] bg-opacity-20 rounded-full p-2.5 border border-1 transition duration-300 hover:bg-opacity-30 group">
-            {obj.icon}
-          </div>
-        </Link>
-      ))}
+    <div
+      className={`flex flex-col sm:flex-row items-center justify-between w-full mt-4 gap-2 ${
+        isMobile && "!justify-center"
+      }`}
+    >
+      <div className="flex items-center gap-2">
+        {icons.map((obj, idx) => (
+          <Link key={idx} to={obj.link}>
+            <div className="transition duration-300 hover:bg-opacity-30 group">
+              {obj.icon}
+            </div>
+          </Link>
+        ))}
+      </div>
+      {!isMobile && (
+        <small className="text-xs">
+          &#xA9;Copyright ibrahim constructions ltd {new Date().getFullYear()}
+        </small>
+      )}
     </div>
   );
-}
+};
 
 export default FooterLinks;
