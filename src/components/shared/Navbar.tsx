@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="hidden sm:flex items-center gap-2 lg:gap-4 flex-wrap">
           <div className="flex flex-row gap-1 items-center">
             <PhoneInTalkIcon
-              sx={{ fontSize: 20, color: "#312d7f", fontWeight: "bold" }}
+              sx={{ fontSize: 20, color: "#2f327b", fontWeight: "bold" }}
             />
             <span className="text-sm sm:text-base text-gray-600">
               +8801403336242
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-row gap-1 items-center">
             <MailOutlineIcon
-              sx={{ fontSize: 20, color: "#312d7f", fontWeight: "bold" }}
+              sx={{ fontSize: 20, color: "#2f327b", fontWeight: "bold" }}
             />
             <span className="text-sm sm:text-base text-gray-600">
               ibrahimconstructionsltd@gmail.com

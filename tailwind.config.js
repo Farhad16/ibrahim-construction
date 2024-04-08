@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        global: "#312d7f",
+        global: "#2c05b8",
       },
       backgroundColor: {
-        global: "#312d7f",
+        global: "#2f327b",
       },
     },
   },

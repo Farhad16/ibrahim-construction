@@ -1,0 +1,18 @@
+.divider {
+  width: 100px;
+  height: 6px;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #2c05b8 0%, #7700ff 100%);
+}
+
+.bg-grad {
+  /* background: transparent; */
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2),
+    -6px -6px 15px 0 rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-grad:hover {
+  box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.8);
+}

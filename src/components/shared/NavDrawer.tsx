@@ -14,7 +14,7 @@ export default function NavDrawer({ open, toggleDrawer }: any) {
       anchor="right"
       className="relative"
     >
-      <div className="flex flex-col gap-4 w-full h-full bg-global bg-opacity-80 text-white pt-12 justify-between">
+      <div className="flex flex-col gap-4 w-full h-full bg-black bg-opacity-80 text-white pt-12 justify-between">
         <nav className="flex flex-col gap-4 pl-8">
           {pages.map((page) => (
             <NavLink

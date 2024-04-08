@@ -71,7 +71,7 @@ const SlideBanner = () => {
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5, easing: "ease" }}
-                    className="text-lg font-bold uppercase w-full h-full"
+                    className="text-lg font-bold w-full h-full"
                   >
                     Get in touch
                   </motion.button>
