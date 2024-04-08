@@ -6,12 +6,12 @@
   z-index: 10;
 }
 
-nav a,
+.menu a,
 .scrollNav a {
   position: relative;
 }
 
-nav a::before {
+.menu a::before {
   content: " ";
   position: absolute;
   bottom: 0;
@@ -26,11 +26,11 @@ nav a::before {
   background-color: #2f327b;
 }
 
-nav a:hover::before {
+.menu a:hover::before {
   width: 100%;
 }
 
-.active::before {
+.menu .active::before {
   content: " ";
   position: absolute;
   bottom: 0;

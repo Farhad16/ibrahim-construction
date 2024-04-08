@@ -28,12 +28,15 @@ const Navbar = () => {
   return (
     <>
       <div className="flex md:hidden gap-8 items-center fixed bg-white zIdx px-4 py-4 w-full justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/assets/logo.png" alt="logo" className="w-16 h-16" />
+        <div className="flex items-center gap-2">
+          <Link to="/" className="focus:no-underline no-underline">
+            <img src="/assets/logo.png" alt="logo" className="w-16 h-16" />
+          </Link>
+
           <span className="text-lg sm:text-xl capitalize text-global font-bold w-fit">
             Ibrahim Constructions ltd.
           </span>
-        </Link>
+        </div>
         <div className="flex items-center justify-center min-w-[60px] ">
           <MenuIcon onClick={(e) => setOpen(true)} className="cursor-pointer" />
         </div>
@@ -41,14 +44,16 @@ const Navbar = () => {
       <NavDrawer open={open} toggleDrawer={toggleDrawer} />
 
       <nav className="px-8 sm:px-16 text-black relative">
-        <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 md:h-[140px] py-4">
+        <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 md:h-[120px] py-4">
           <div className="hidden md:flex gap-8 items-center">
-            <Link to="/" className="flex items-center gap-2">
-              <img src="/assets/logo.png" alt="logo" className="w-20 h-20" />
+            <div className="flex items-center gap-2">
+              <Link to="/" className="focus:no-underline no-underline">
+                <img src="/assets/logo.png" alt="logo" className="w-20 h-20" />
+              </Link>
               <span className="text-lg sm:text-xl capitalize text-global font-bold">
                 Ibrahim Constructions ltd.
               </span>
-            </Link>
+            </div>
           </div>
 
           <div className="hidden sm:flex items-center gap-2 lg:gap-4 flex-wrap">
@@ -78,20 +83,22 @@ const Navbar = () => {
           transition={{ duration: 0.5, easing: "easeOut" }}
           className={`hidden md:flex items-center min-h-[70px] absolute right-0 top-[80%] zIdx ${
             scroll
-              ? "!fixed !top-0 w-full bg-white text-global scrollNav justify-between py-2"
+              ? "!fixed !top-0 w-full bg-white text-global scrollNav justify-between"
               : "clip w-1/2 bg-global text-white justify-end"
           }`}
         >
           {scroll && (
-            <Link to="/" className="flex items-center gap-2 pl-8 sm:pl-16">
-              <img src="/assets/logo.png" alt="logo" className="w-16 h-16" />
+            <div className="flex items-center gap-2 pl-8 sm:pl-16">
+              <Link to="/" className="focus:no-underline no-underline">
+                <img src="/assets/logo.png" alt="logo" className="w-16 h-16" />
+              </Link>
               <span className="text-lg sm:text-xl capitalize text-global font-bold w-fit">
                 Ibrahim Constructions ltd.
               </span>
-            </Link>
+            </div>
           )}
 
-          <div className="flex items-center gap-6 mr-[70px] text-base">
+          <div className="flex items-center gap-6 mr-[70px] text-base menu">
             {pages.map((page) => (
               <NavLink
                 to={page.link}

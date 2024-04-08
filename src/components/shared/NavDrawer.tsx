@@ -1,10 +1,9 @@
 import * as React from "react";
 
 import Drawer from "@mui/material/Drawer";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { pages } from "../../constance/menu";
 import CloseIcon from "@mui/icons-material/Close";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import FooterLinks from "./FooterLinks";
 
 export default function NavDrawer({ open, toggleDrawer }: any) {

@@ -1,13 +1,20 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const SlideBanner = () => {
   return (
-    <Swiper navigation={true} modules={[Navigation]} className="z-0 w-full">
+    <Swiper
+      navigation={true}
+      modules={[Navigation, Autoplay]}
+      autoplay={{
+        delay: 5000,
+      }}
+      className="z-0 w-full"
+    >
       <SwiperSlide>
         <div
           style={{
