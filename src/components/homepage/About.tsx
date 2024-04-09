@@ -4,7 +4,7 @@ import People from "./People";
 const About = () => {
   return (
     <div
-      className="px-8 sm:px-16 py-[100px] flex flex-col bg-gray-100"
+      className="px-8 sm:px-16 py-[60px] sm:py-[100px] flex flex-col bg-gray-100"
       id="about"
     >
       <div className="flex flex-col gap-6 sm:col-span-2">

@@ -1,6 +1,7 @@
 import React from "react";
 import { visitingCards } from "../constance/people";
 import Card from "../components/contact/Card";
+import Communication from "../components/contact/Communication";
 
 const Contact = () => {
   return (
@@ -18,7 +19,9 @@ const Contact = () => {
         <h1 className="text-4xl sm:text-5xl">Contact With Us</h1>
       </div>
 
-      <div className="flex flex-col py-[100px]">
+      <Communication />
+
+      <div className="flex flex-col py-[60px] sm:py-[100px]">
         <div className="px-8 sm:px-16">
           <h2 className="font-bold text-2xl sm:text-4xl capitalize text-global leading-[80%]">
             Management Contacts
