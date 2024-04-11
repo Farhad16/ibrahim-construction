@@ -76,7 +76,24 @@ const Footer = () => {
 
       <div className="flex flex-col items-center justify-center mt-6 w-full">
         <Divider className="bg-white bg-opacity-50 w-full h-[2px]" />
-        <FooterLinks />
+        <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-between w-full mt-4 gap-2">
+          <FooterLinks />
+          <small className="text-xs capitalize">
+            &#xA9; {new Date().getFullYear()} ibrahim constructions ltd. All
+            rights reserved
+          </small>
+
+          <div className="flex flex-col">
+            <Link
+              target="_blank"
+              to="https://farhad-portfolio.vercel.app/"
+              className="focus:no-underline hover:underline no-underline text-white font-semibold text-xs capitalize text-gray-300"
+            >
+              Designed & Developed by
+              <span className="text-white"> Farhad</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

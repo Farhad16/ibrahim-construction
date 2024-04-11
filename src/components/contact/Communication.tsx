@@ -3,10 +3,11 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { Link } from "react-router-dom";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { motion } from "framer-motion";
 
 const Communication = () => {
   return (
-    <div className="px-8 sm:px-16 flex flex-col pt-[60px] sm:pt-[100px]">
+    <div className="px-8 sm:px-16 flex flex-col py-[60px] sm:py-[100px]">
       <div className="">
         <h2 className="font-bold text-2xl sm:text-4xl capitalize text-global leading-[80%]">
           Communicate Through
@@ -15,7 +16,12 @@ const Communication = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 sm:gap-8">
-        <div className="flex gap-2 group">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, easing: "easeOut" }}
+          className="flex gap-2 group"
+        >
           <div className="flex items-center justify-center bg-global w-[80px] h-[80px]">
             <PhoneIcon
               sx={{ color: "white", fontSize: "40px" }}
@@ -37,9 +43,14 @@ const Communication = () => {
               +8801628339104
             </Link>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex gap-2 group">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, easing: "easeOut" }}
+          className="flex gap-2 group"
+        >
           <div className="flex items-center justify-center bg-global w-[80px] h-[80px]">
             <EmailIcon
               sx={{ color: "white", fontSize: "40px" }}
@@ -55,9 +66,14 @@ const Communication = () => {
               ibrahimconstructionsltd@gmail.com
             </Link>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex gap-2 group">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, easing: "easeOut" }}
+          className="flex gap-2 group"
+        >
           <div className="flex items-center justify-center bg-global w-[80px] h-[80px]">
             <LocationOnIcon
               sx={{ color: "white", fontSize: "40px" }}
@@ -78,9 +94,14 @@ const Communication = () => {
               Vatara, Dhaka
             </p>
           </Link>
-        </div>
+        </motion.div>
 
-        <div className="flex gap-2 group">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, easing: "easeOut" }}
+          className="flex gap-2 group"
+        >
           <div className="flex items-center justify-center bg-global w-[80px] h-[80px]">
             <LocationOnIcon
               sx={{ color: "white", fontSize: "40px" }}
@@ -99,7 +120,7 @@ const Communication = () => {
               Joydebpur Bazar Road
             </p>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

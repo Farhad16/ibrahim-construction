@@ -81,7 +81,7 @@ const Navbar = () => {
           initial={{ width: scroll ? "100%" : "50%" }}
           animate={{ width: scroll ? "100%" : "50%" }}
           transition={{ duration: 0.5, easing: "easeOut" }}
-          className={`hidden md:flex items-center min-h-[70px] absolute right-0 top-[80%] zIdx ${
+          className={`hidden md:flex items-center min-h-[70px] absolute right-0 top-[80%] zIdx shadow-md ${
             scroll
               ? "!fixed !top-0 w-full bg-white text-global scrollNav justify-between"
               : "clip w-1/2 bg-global text-white justify-end"

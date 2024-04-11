@@ -1,12 +1,18 @@
 import React from "react";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import { motion } from "framer-motion";
 
 const Card = (props: any) => {
-  const { name, designation, phone1, phone2 } = props;
+  const { name, designation, phone1, phone2, idx } = props;
 
   return (
-    <div className="flex flex-col border-2 border-gray-500 border-opacity-50 pt-4 sm:pt-6">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 + idx * 0.1, easing: "easeOut" }}
+      className="flex flex-col border-2 border-gray-500 border-opacity-50 pt-4 sm:pt-6 bg-white"
+    >
       <div className="flex justify-between items-center px-4 sm:px-6">
         <img src="/assets/circle-logo.png" alt="logo" className="w-14 h-14" />
         <div className="flex flex-col justify-end text-right">
@@ -47,7 +53,7 @@ const Card = (props: any) => {
         <EmailIcon sx={{ fontSize: 14, fontWeight: "bold" }} />
         <span>ibrahimconstructionsltd@gmail.com</span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

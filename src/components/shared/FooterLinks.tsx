@@ -25,25 +25,14 @@ const icons = [
 ];
 const FooterLinks = ({ isMobile }: { isMobile?: boolean }) => {
   return (
-    <div
-      className={`flex flex-col sm:flex-row items-center justify-between w-full mt-4 gap-2 ${
-        isMobile && "!justify-center"
-      }`}
-    >
-      <div className="flex items-center gap-2">
-        {icons.map((obj, idx) => (
-          <Link key={idx} to={obj.link}>
-            <div className="transition duration-300 hover:bg-opacity-30 group">
-              {obj.icon}
-            </div>
-          </Link>
-        ))}
-      </div>
-      {!isMobile && (
-        <small className="text-xs">
-          &#xA9;Copyright ibrahim constructions ltd {new Date().getFullYear()}
-        </small>
-      )}
+    <div className="flex items-center gap-2">
+      {icons.map((obj, idx) => (
+        <Link key={idx} to={obj.link}>
+          <div className="transition duration-300 hover:bg-opacity-30 group">
+            {obj.icon}
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };

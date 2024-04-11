@@ -21,8 +21,8 @@ code {
 }
 
 *::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -30,6 +30,5 @@ code {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgba(138, 138, 138);
-  border-radius: 20px;
+  background: rgb(109, 109, 109);
 }

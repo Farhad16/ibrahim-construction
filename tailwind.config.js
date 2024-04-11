@@ -9,6 +9,12 @@ module.exports = {
       backgroundColor: {
         global: "#2c05b8",
       },
+      outlineColor: {
+        global: "#2c05b8",
+      },
+      borderColor: {
+        global: "#2c05b8",
+      },
     },
   },
   plugins: [],
