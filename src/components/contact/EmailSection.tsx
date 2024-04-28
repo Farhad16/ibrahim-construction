@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import FormInput from "../shared/FormInput";
+import { sendEmail } from "../../api/api";
 
 const EmailSection = () => {
   const [loading, setLoading] = useState(false);
@@ -44,15 +45,17 @@ const EmailSection = () => {
       if (!values.email || !values.name || !values.subject) {
         return;
       }
-      // if (res) {
-      //   toast.success(
-      //     "Thanks for your message, We will get back to you asap.",
-      //     {
-      //       position: "top-right",
-      //       autoClose: 3000,
-      //     }
-      //   );
-      // }
+
+      const res = await sendEmail(values);
+      if (res) {
+        toast.success(
+          "Thanks for your message, We will get back to you asap.",
+          {
+            position: "top-right",
+            autoClose: 3000,
+          }
+        );
+      }
       reset();
     } catch (error) {
       console.error("Error submitting form:", error);
